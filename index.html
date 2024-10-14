@@ -4,42 +4,20 @@
   <title>THAIVOTE 2567</title>
   <meta charset="UTF-8">
   <meta rel="icon" href="https://party.ect.go.th/themes/ect-pr/assets/images/logo_ect_big.png">
-</head>
-<body style="margin:0;"><header class="main-header">
-  <nav class="navbar navbar-static-top">
-    <div class="container">
-      <div class="navbar-header">
-        <a class="logos" href="#">
-          <div class="img-container">
-            <img src="https://www.ect.go.th/ect_th/app/images/Logo-ect-2.svg" alt="Website Logo">
-          </div>
-          <div class="text-wrapper">
-            <p>สำนักงานคณะกรรมการการเลือกตั้ง</p>
-          </div>
-        </a>
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
-          <i class="fa fa-bars"></i>
-        </button>
-      </div>
-      <div class="navbar-custom-menu">
-        <ul class="nav navbar-nav">
-          <li class="user user-menu">
-            <a href="">
-              <img src="<?php echo (!empty($voter['photo'])) ? 'images/'.$voter['photo'] : 'images/profile.jpg' ?>" class="user-image" alt="User Image">
-              <span class="hidden-xs"><?php echo $voter['firstname'].' '.$voter['lastname']; ?></span>
-            </a>
-          </li>
-          <li><a href="logout.php"><i class="fa fa-sign-out"></i> LOGOUT</a></li>  
-        </ul>
-      </div>
-      <!-- /.navbar-custom-menu -->
-    </div>
-    <!-- /.container-fluid -->
-  </nav>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet">
   <style>
+  .main-header .navbar {
+      -webkit-transition: margin-left .3s ease-in-out;
+      -o-transition: margin-left .3s ease-in-out;
+      transition: margin-left .3s ease-in-out;
+      margin-bottom: 0;
+      margin-left: 230px;
+      border: none;
+      min-height: 50px;
+      border-radius: 0;
+  }
     nav.navbar,
     .navbar-custom-menu {
       background-color: #fff !important;
@@ -52,6 +30,40 @@
     nav.navbar .logos {
         color: #194e84;
     }
+    
+    @media (min-width: 992px) {
+        .container {
+            width: 970px;
+        }
+    }
+    @media (min-width: 768px) {
+        .container {
+            width: 750px;
+        }
+    }
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+      @media (min-width: 768px) {
+          .container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+              margin-right: 0;
+              margin-left: 0;
+          }
+      }
+      .container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+          margin-right: -15px;
+          margin-left: -15px;
+      }
+      
+      @media (min-width: 768px) {
+          .navbar-header {
+              float: left;
+          }
+      }
     nav.navbar .logos {
         display: flex;
         align-items: center;
@@ -80,6 +92,25 @@
       color: #30906a !important;
     }
   </style>
+</head>
+<body style="margin:0;"><header class="main-header">
+  <nav class="navbar navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="logos" href="#">
+          <div class="img-container">
+            <img src="https://www.ect.go.th/ect_th/app/images/Logo-ect-2.svg" alt="Website Logo">
+          </div>
+          <div class="text-wrapper">
+            <p>สำนักงานคณะกรรมการการเลือกตั้ง</p>
+          </div>
+        </a>
+      </div>
+      <!-- /.navbar-custom-menu -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+  
 </header>
   <a href="https://31a5-2405-9800-b900-23d0-7475-9822-2896-dcbf.ngrok-free.app/">ระบบเลือกตั้ง</a>
 </body>
